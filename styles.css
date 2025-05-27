@@ -22,6 +22,26 @@ body {
   margin: 0 auto;
 }
 
+
+.typing-container {
+  font-size: 2rem;
+  display: flex;
+  gap: 10px;
+}
+
+.typing-text::after {
+  content: '|';
+  animation: blink 0.7s infinite;
+  margin-left: 2px;
+  color: #4a76ee;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
 a {
   color: var(--link-color);
   text-decoration: none;
