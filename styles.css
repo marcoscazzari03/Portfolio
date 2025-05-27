@@ -117,6 +117,15 @@ nav .right a span {
   border: 2px solid var(--text-color);
 }
 
+.cv{
+  background-color: var(--link-color);
+  color: var(--background-color);
+  transition: all 0.3s ease;
+}
+.cv:hover {
+  background-color: white;
+  color: blue;
+}
 .hero-section .headshot {
   flex: 2;
   display: flex;
@@ -273,6 +282,9 @@ nav .right a span {
   .hero-section .text h2 {
     font-size: 35px;
   }
+    .typing-container{
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 740px) {
@@ -304,6 +316,10 @@ nav .right a span {
   /* NAVBAR */
   nav {
     padding: 0 20px;
+  }
+  
+  .typing-container{
+    font-size: 25px;
   }
 
   nav .right a {

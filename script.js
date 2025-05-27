@@ -1,4 +1,4 @@
-const roles = ["web developer", "web designer", "freelancer", "programmatore"];
+const roles = ["web developer", "web designer", "seo specialist", "programmatore"];
 const typingText = document.querySelector(".typing-text");
 
 let roleIndex = 0;
