@@ -16,7 +16,7 @@
 
   <link rel="stylesheet" href="styles.css">
 
-  <title>Portfolio | Marco Scazzari</title>
+  <title>Portfolio</title>
 </head>
 
 <body>
@@ -45,7 +45,7 @@
   </nav>
 
   <main>
-    <!-- SECTION 1: Hero -->
+    <!-- SEZIONE 1: Hero -->
     <section class="hero-section">
       <div class="text">
         <h2>Ciao, sono Marco 👋</h2>
@@ -59,21 +59,26 @@
           obiettivi concreti.</p>
 
         <div class="links">
-          <a href="#skills" class="cv">
+          <a href="curriculumscazzari.pdf" download class="cv">
             <i class="fa-solid fa-file"></i>
             <span>Scarica CV</span>
           </a>
-          <a href="#skills">
+          <a href="#skills" class="btn-header">
             <i class="fa-solid fa-code"></i>
             <span>Skills</span>
           </a>
 
-          <a href="#testimony">
+          <a href="#testimony" class="btn-header">
             <i class="fa-solid fa-pen"></i>
             <span>Testimony</span>
           </a>
 
-          <a href="#contact">
+          <a href="#progetti" class="btn-header">
+            <i class="fa-solid fa-diagram-project"></i>
+            <span>Progetti</span>
+          </a>
+
+          <a href="#contact" class="btn-header">
             <i class="fa-solid fa-envelope"></i>
             <span>Contact</span>
           </a>
@@ -85,11 +90,13 @@
       </div>
     </section>
 
-    <!-- SECTION 2: Skills -->
+    <!-- SEZIONE 2: Skills -->
     <section id="skills" class="skills-section">
       <h2>Skills</h2>
       <div class="text">
-        Qui sotto troverai una dettagliata panoramica delle mie competenze tecniche e professionali, sviluppate nel corso degli anni grazie a progetti concreti e tanta passione. Queste skill mi permettono di creare soluzioni efficaci e creative nel mondo del web.
+        Qui sotto troverai una dettagliata panoramica delle mie competenze tecniche e professionali, sviluppate nel
+        corso degli anni grazie a progetti concreti e tanta passione. Queste skill mi permettono di creare soluzioni
+        efficaci e creative nel mondo del web.
       </div>
 
       <div class="cells">
@@ -131,6 +138,40 @@
       </div>
     </section>
 
+    <!-- SEZIONE 3: Progetti -->
+
+    <section id="progetti" class="projects-section">
+      <h1>Progetti</h1>
+      <div class="projects-container">
+        <!-- Progetto 1 -->
+        <div class="project-card">
+          <img src="images/trend-online.png" alt="Trend-Online immagine">
+          <h2>Trend-Online</h2>
+          <p>Entrato nel team, ho contribuito a Trend-Online con passione, unendo creatività e tecnica. Ho curato
+            codice, banner, performance e seguito la migrazione da Angular a WordPress per migliorarne la gestione.</p>
+          <button>Scopri Progetto</button>
+        </div>
+
+        <!-- Progetto 2 -->
+        <div class="project-card">
+          <img src="images/lefontiawards.png" alt="LeFontiAwards immagine">
+          <h2>Project 2</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum possimus, voluptatum fugit provident ex ipsa
+            doloribus...</p>
+          <button>Review Project</button>
+        </div>
+
+        <!-- Progetto 3 -->
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300x180?text=Project+3" alt="Project 3 Image">
+          <h2>Project 3</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum possimus, voluptatum fugit provident ex ipsa
+            doloribus...</p>
+          <button>Review Project</button>
+        </div>
+      </div>
+    </section>
+    
     <!-- SECTION 3: Testimony -->
     <section id="testimony" class="testimony-section">
       <h2>Testimony</h2>
