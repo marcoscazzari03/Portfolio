@@ -40,19 +40,42 @@ typeEffect();
   });
 
 //Bottone gotop
-let mybutton = document.getElementById("gotop");
-
-window.onscroll = function() { scrollFunction() };
+const mybutton = document.getElementById("gotop");
+const navbar = document.querySelector("nav");
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+  const isDesktop = window.innerWidth >= 1024;
+
+  // Mostra o nasconde il bottone "go to top"
+  if (scrollTop > 20) {
     mybutton.classList.add("show");
   } else {
     mybutton.classList.remove("show");
   }
+
+  // Gestisci la navbar normale visibilità (nascondila se scrolli > 0 su tutti i dispositivi tranne PC)
+  if (scrollTop > 0 && !isDesktop) {
+    navbar.classList.add("hidden-normal");
+  } else {
+    navbar.classList.remove("hidden-normal");
+  }
+
+  // Aggiunge o rimuove la classe "scrolled" solo su desktop
+  if (scrollTop > 50 && isDesktop) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
 }
 
+// Scroll verso l'alto al click del bottone
 mybutton.addEventListener("click", function topFunction() {
   document.body.scrollTop = 0; // Safari
-  document.documentElement.scrollTop = 0; // Chrome, Firefox, IE, Opera
+  document.documentElement.scrollTop = 0; // Altri browser
 });
+
+// Listener per lo scroll
+window.onscroll = scrollFunction;
+// Listener per resize finestra
+window.onresize = handleResize;
