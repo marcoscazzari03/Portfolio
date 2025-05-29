@@ -112,7 +112,6 @@ nav .right {
 }
 @media (max-width: 1023px) {
   nav.scrolled {
-    /* Rimuove tutti gli stili sticky o di sidebar */
     position: fixed;
     top: 0;
     left: 0;
