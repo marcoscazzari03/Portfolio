@@ -268,6 +268,17 @@ nav .right a span {
   transition: background 0.3s ease;
 }
 
+.project-card a {
+  background: var(--link-color);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
 /* SECTION 3: Testimony */
 .testimony-section {
   padding: 0 50px;
@@ -363,6 +374,60 @@ nav .right a span {
 .contact-section .group form button:hover {
   filter: brightness(.9);
 }
+
+.footer {
+  background-color: var(--background-color);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: Arial, sans-serif;
+  color: #000;
+}
+
+.social-icons {
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  margin: 0 10px;
+  color: var(--link-color);
+  font-size: 1.5rem;
+  border: 1px solid var(--link-color);
+  border-radius: 50%;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: var(--link-color);
+  color: white;
+}
+
+.footer-nav {
+  margin-bottom: 1rem;
+}
+
+.footer-nav a {
+  margin: 0 15px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-credit {
+  font-size: 0.9rem;
+  color: #555;
+}
+
 
 @media (max-width: 850px) {
   /* SECTION 1: Hero */
