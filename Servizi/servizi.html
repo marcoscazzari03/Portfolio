@@ -1,49 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Our Services</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="servizi.css">
+
+  <title>Portfolio</title>
 </head>
+
 <body>
 
-  <section class="services">
-    <div class="container">
-      <div class="header">
-        <div class="stars">★★★★★</div>
-        <h2>Our Services</h2>
-        <p>We’re a highly ranked web design agency that helps businesses create and optimize websites that are as beautiful as they are functional. A part of the services that we offer include:</p>
-      </div>
-
-      <div class="service-grid">
-        <div class="service-box">
-          <h4 class="label ux">Ux/Ui</h4>
-          <h3>User experience design</h3>
-          <p>We use the best technologies available combined with rigorous standards and our highly qualified team to give you a beautiful website loved by your users.</p>
-          <a href="#" class="learn-more">Learn More</a>
-        </div>
-
-        <div class="service-box">
-          <h4 class="label seo">Seo</h4>
-          <h3>Search engine optimization</h3>
-          <p>We are a digital marketing and SEO agency dedicated to helping businesses develop their online presence, get remarkable results and really grow.</p>
-          <a href="#" class="learn-more">Learn More</a>
-        </div>
-
-        <div class="service-box">
-          <h4 class="label web">Web</h4>
-          <h3>Web design & development</h3>
-          <p>Our designers have crafted hundreds of WordPress websites. We’ve also created two of the most appreciated WordPress themes on the market.</p>
-          <a href="#" class="learn-more">Learn More</a>
-        </div>
-      </div>
-
-      <div class="btn-wrapper">
-        <a href="#" class="view-all">View All Services</a>
-      </div>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="left">
+      <a href="/">Marco Scazzari</a>
     </div>
-  </section>
 
+    <div class="right">
+      <a href="https://github.com/marcoscazzari03/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+        <span>Github</span>
+      </a>
+
+      <a href="https://www.linkedin.com/in/marco-scazzari/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>Linkedin</span>
+      </a>
+
+      <a href="mailto:marcoscazzari03@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Email</span>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="services">
+      <div class="header">
+        <h2>Servizi</h2>
+        <h3>Tutto ciò che faccio ci aiuta a crescere insieme!</h3>
+        <p>
+          Progetto e realizzo siti web e identità visive con un approccio strategico e un’estetica curata, pensati per
+          lasciare il segno e generare emozioni. Scopri l’intera gamma di servizi digitali per capire come posso
+          aiutarti a far crescere la tua presenza online.
+        </p>
+      </div>
+
+      <div class="service-list" style="height: 2000px;">
+        <ul>
+          <li><i class="fa-solid fa-chevron-right"></i> <span class="text">User experience design</span></li>
+          <li><i class="fa-solid fa-chevron-right"></i> <span class="text">Search engine optimization</span></li>
+          <li><i class="fa-solid fa-chevron-right"></i> <span class="text">Web design & development</span></li>
+          <li><i class="fa-solid fa-chevron-right"></i> <span class="text">Ecommerce development</span></li>
+        </ul>
+        <ul>
+          <li><i class="fa-solid fa-chevron-right"></i> <span class="text">Software as a service</span></li>
+          <li><i class="fa-solid fa-chevron-right"></i> <span class="text">Branding & visual design</span></li>
+          <li><i class="fa-solid fa-chevron-right"></i> <span class="text">Content & copywriting</span></li>
+          <li><i class="fa-solid fa-chevron-right"></i> <span class="text">Email marketing</span></li>
+        </ul>
+        <ul>
+          <li><i class="fa-solid fa-chevron-right"></i> <span class="text">Pay per click management</span></li>
+          <li><i class="fa-solid fa-chevron-right"></i> <span class="text">Social media marketing</span></li>
+          <li><i class="fa-solid fa-chevron-right"></i> <span class="text">Strategy & consulting</span></li>
+          <li><i class="fa-solid fa-chevron-right"></i> <span class="text">Wordpress web design</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <button onclick="topFunction()" id="gotop" title="Torna su"><i class="fa-solid fa-arrow-up"></i></button>
+  <script src="servizi.js"></script>
 </body>
+
 </html>
