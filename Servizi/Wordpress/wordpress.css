@@ -1,0 +1,249 @@
+:root {
+    --text-color: #1a1c20;
+    --link-color: #4a76ee;
+    --background-color: #eeeff1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--link-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3161e3;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* NAVBAR */
+nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
+    /* nessun background */
+}
+
+
+@media (max-width: 1023px) {
+    nav.scrolled {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background-color: transparent;
+        box-shadow: none;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 50px;
+    }
+
+    nav.scrolled .left,
+    nav.scrolled .right {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav.scrolled .right a {
+        margin: 0 10px;
+        font-size: inherit;
+    }
+}
+
+nav .left a {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav .right a {
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+nav .right a:last-child {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+nav .right a span {
+    margin-left: 5px;
+}
+
+#gotop {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--link-color);
+    color: white;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+#gotop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#gotop:hover {
+    background-color: #555;
+}
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.button-container {
+  text-align: center; /* centra il contenuto orizzontalmente */
+  margin-top: 20px;   /* spazio sopra il bottone */
+}
+
+.btn-blu {
+  background-color: #007BFF;  /* blu */
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn-blu:hover {
+  background-color: var(--link-color); 
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.fa-brands.fa-wordpress{
+  width: 100%;
+  font-size: 125px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: #0d1b2a;
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 10px;
+  background-color: var(--link-color);
+  z-index: -1;
+}
+
+.description {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: #6c7687;
+  line-height: 1.6;
+}
+
+.divider {
+  width: 75%;
+  height: 2px;
+  background-color: #ccc;
+  margin: 40px auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.services {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: #0d1b2a;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
