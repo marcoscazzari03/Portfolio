@@ -76,40 +76,7 @@ nav {
   background-color: transparent; /* nessun background */
 }
 
-/*barra laterale on scroll solo per desktop grande */
-@media (min-width: 1800px) {
-nav.scrolled {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 20px 10px;
-  transition: all 0.3s ease;
-}
 
-nav.scrolled .left,
-nav.scrolled .right {
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-}
-
-nav.scrolled .right a {
-  margin: 10px 0;
-  font-size: 16px;
-}
-
-nav .left,
-nav .right {
-  display: flex;
-  align-items: center;
-}
-}
 @media (max-width: 1023px) {
   nav.scrolled {
     position: fixed;
@@ -217,7 +184,7 @@ nav .right a span {
 }
 
 .hero-section .headshot img {
-  width: 350px;
+  width: 550px;
   border-radius: 50%;
 }
 
@@ -255,8 +222,143 @@ nav .right a span {
   background-color: #555; 
 }
 
+/* SEZIONE: Servizi */
+.services .header {
+  font-size: 50px;
+  text-align: center; /* Centra tutto */
+  width: 100%; /* Assicura che occupi tutta la larghezza */
+  margin-bottom: 40px;
+}
+.services .header .stars {
+  font-size: 40px;
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.services .header h2 {
+  letter-spacing: -2px !important;
+  line-height: 1.1 !important;
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+.services .header h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--link-color); /* blu */
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.services .header p {
+  font-size: 16px;
+  color: #666;
+  width: 70%; /* Usa tutta la larghezza disponibile */
+  max-width: none; /* Rimuove il limite di larghezza */
+  margin: 0 auto 40px;
+  text-align: center; /* Opzionale: giustifica il testo */
+}
+
+.service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.service-box {
+  flex: 1 1 30%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.service-box .label {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.label.ux { color: #2aa5f9; font-family: cursive; }
+.label.seo { color: #2aa5f9; font-family: cursive}
+.label.web { color: #2aa5f9; font-family: cursive}
+
+.service-box h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.service-box p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.learn-more {
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 2px solid #00c2ff;
+  position: relative;
+}
+
+.learn-more::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(0, 194, 255, 0.2);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.btn-wrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.view-all {
+  background-color: #0d1a2b;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.view-all:hover {
+  background-color: #1c2e45;
+}
+/* Responsive */
+@media (max-width: 900px) {
+  .service-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+
 /* SECTION 2: Skills */
 .skills-section {
+  margin-top: 100px;
   padding: 0 50px;
   margin-bottom: 100px;
 }
@@ -283,12 +385,18 @@ nav .right a span {
   justify-content: center;
   align-items: center;
   gap: 10px;
-
   width: 200px;
   padding: 10px 20px;
   margin: 10px;
-  border: 1.5px solid #d3d3d3;
-  border-radius: 5px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills-section .cells .cell:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
 }
 
 .skills-section .cells .cell img {
@@ -301,6 +409,7 @@ nav .right a span {
 .skills-section .cells .cell span {
   font-size: 18px;
 }
+
 
 /* SECTION 3: Progetti */
 .projects-section {
@@ -333,8 +442,8 @@ nav .right a span {
 }
 
 .project-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 10px var(--link-color), 0 0 10px var(--link-color), 0 0 10px var(--link-color);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
 }
 
 
