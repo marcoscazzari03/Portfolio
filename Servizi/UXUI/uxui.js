@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   const myButton = document.getElementById("gotop");
   const navbar = document.querySelector("nav");
@@ -21,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
-
 // LINEA SOTTO SCRITTA SERVIZI  
   window.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.highlight');
