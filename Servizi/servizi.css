@@ -148,11 +148,11 @@ nav .right a span {
 }
 
 .services .header h2 {
-    font-size: 48px;
-    font-weight: 900;
-    margin-bottom: 10px;
-    position: relative;
-    display: inline-block;
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
   margin: 0 auto;
   text-align: center;
 }
@@ -163,10 +163,16 @@ nav .right a span {
   bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 60%;
+  width: 0;
   height: 10px;
   background-color: var(--link-color);
   z-index: -1;
+  transition: width 1s ease;
+}
+
+/* Classe attivata da JS */
+.services .header h2.animate-line::after {
+  width: 60%;
 }
 
 .services .header h3 {
@@ -213,16 +219,21 @@ nav .right a span {
 
 .service-list ul li a {
     color: black;
+    font-size: 1rem;
 }
 .service-list li:hover a {
   transform: translateX(5px); 
 }
 
 .fa-solid.fa-chevron-right {
-  font-size: 15px;
-  font-weight: 800;
-  margin-right: 15px;
-  color: #0d1a2b; 
+  font-size: 15px; 
+  margin-right: 10px;
+  color: #0d1a2b;
+  text-shadow: 
+  0.5px 0 #0d1a2b,
+  -0.5px 0 #0d1a2b,
+  0 0.5px #0d1a2b,
+  0 -0.5px #0d1a2b; 
   transition: color 0.3s ease;
 }
 

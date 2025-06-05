@@ -1,7 +1,10 @@
 :root {
   --text-color: #1a1c20;
   --link-color: #4a76ee;
-  --background-color: #eeeff1;
+  --background-color: #fff;
+  --background-color2: #f7f9f9;
+  --Epilogue: 'Epilogue', sans-serif;
+  --Outfit: 'Outfit', sans-serif;
 }
 
 * {
@@ -128,6 +131,7 @@ nav .right a span {
 /* SECTION 1: Hero */
 .hero-section {
   display: flex;
+  flex-direction: row-reverse; /* AGGIUNTO */
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
@@ -141,7 +145,52 @@ nav .right a span {
 }
 
 .hero-section .text h2 {
-  font-size: 45px;
+  font-size: 20px;
+  font-family: cursive;
+  color: var(--link-color);
+  margin-bottom: 15px;
+}
+
+.hero-section .text h1 {
+  font-size: 55px;
+  font-family: var(--Epilogue);
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -2px !important;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-section .text h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0; /* Allinea a sinistra */
+  width: 300px;
+  height: 15px;
+  background-color: var(--link-color);
+  z-index: -1;
+  transition: width 1s ease;
+}
+
+.hero-section .text h3 {
+  font-size: 55px;
+  font-family: var(--Epilogue);
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -2px !important;
+}
+
+.hero-section .text p {
+  color: #808893;
+  margin-top: 30px;
+  font-family: var(--Outfit);
+  font-size: 20px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
 }
 
 .hero-section .text .links {
@@ -255,7 +304,7 @@ nav .right a span {
 }
 
 .services .header p {
-  font-size: 16px;
+  font-size: 18px;
   color: #666;
   width: 70%; /* Usa tutta la larghezza disponibile */
   max-width: none; /* Rimuove il limite di larghezza */
@@ -337,10 +386,11 @@ nav .right a span {
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
+  transition: all 0.3s ease;
 }
 
 .view-all:hover {
-  background-color: #1c2e45;
+  background-color: var(--link-color);
 }
 /* Responsive */
 @media (max-width: 900px) {
@@ -452,16 +502,26 @@ nav .right a span {
 
 .project-card img {
   width: 100%;
-  height: 250px; /* o l'altezza che preferisci */
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 15px;
 }
 
 .project-card h2 {
-  font-size: 1.5rem;
+  font-size: 30px;
   margin: 10px 0;
   text-align: center;
+  color: black;
+  letter-spacing: -1px !important;
+}
+
+
+.project-card h3 a,
+.and-symbol{
+  font-size: 20px;
+  color: var(--link-color);
+  font-family: var(--Outfit)
 }
 
 .project-card p {
@@ -469,28 +529,6 @@ nav .right a span {
   color: black;
   margin-bottom: 20px;
   text-align: center;
-}
-
-.project-card button {
-  background: var(--link-color);
-  border: none;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 25px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.project-card a {
-  background: var(--link-color);
-  border: none;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 25px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
 }
 
 /* SECTION 3: Testimony */

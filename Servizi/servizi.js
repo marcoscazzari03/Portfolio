@@ -21,3 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
+// LINEA SOTTO SCRITTA SERVIZI  
+  window.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.services .header h2');
+    if (header) {
+      setTimeout(() => {
+        header.classList.add('animate-line');
+      }, 100); // leggero ritardo per assicurarsi che il DOM sia pronto
+    }
+  });
