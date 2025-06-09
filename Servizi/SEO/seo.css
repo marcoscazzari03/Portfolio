@@ -44,6 +44,7 @@ a {
 
 /* NAVBAR */
 nav {
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -55,7 +56,7 @@ nav {
     height: 80px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     background-color: transparent;
-    /* nessun background */
+    backdrop-filter: blur(10px); /* Opzionale: sfoca lo sfondo */
 }
 
 
