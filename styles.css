@@ -40,9 +40,17 @@ body {
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -76,7 +84,8 @@ nav {
   padding: 0 50px;
   height: 80px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  background-color: transparent; /* nessun background */
+  background-color: transparent;
+  /* nessun background */
 }
 
 
@@ -106,6 +115,7 @@ nav {
     font-size: inherit;
   }
 }
+
 nav .left a {
   color: var(--text-color);
   font-size: 22px;
@@ -131,7 +141,8 @@ nav .right a span {
 /* SECTION 1: Hero */
 .hero-section {
   display: flex;
-  flex-direction: row-reverse; /* AGGIUNTO */
+  flex-direction: row-reverse;
+  /* AGGIUNTO */
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
@@ -168,7 +179,8 @@ nav .right a span {
   content: '';
   position: absolute;
   bottom: 0px;
-  left: 0; /* Allinea a sinistra */
+  left: 0;
+  /* Allinea a sinistra */
   width: 300px;
   height: 15px;
   background-color: var(--link-color);
@@ -212,17 +224,18 @@ nav .right a span {
   border: 2px solid var(--text-color);
 }
 
-.cv{
+.cv {
   background-color: var(--link-color);
   color: var(--background-color);
   transition: all 0.3s ease;
 }
+
 .cv:hover {
   background-color: white;
   transform: scale(1.05);
 }
 
-.btn-header:hover{
+.btn-header:hover {
   transform: scale(1.01);
 }
 
@@ -261,6 +274,7 @@ nav .right a span {
   visibility: hidden;
   transition: opacity 0.3s ease;
 }
+
 #gotop.show {
   opacity: 1;
   visibility: visible;
@@ -268,16 +282,19 @@ nav .right a span {
 }
 
 #gotop:hover {
-  background-color: #555; 
+  background-color: #555;
 }
 
 /* SEZIONE: Servizi */
 .services .header {
   font-size: 50px;
-  text-align: center; /* Centra tutto */
-  width: 100%; /* Assicura che occupi tutta la larghezza */
+  text-align: center;
+  /* Centra tutto */
+  width: 100%;
+  /* Assicura che occupi tutta la larghezza */
   margin-bottom: 40px;
 }
+
 .services .header .stars {
   font-size: 40px;
   color: gold;
@@ -293,12 +310,14 @@ nav .right a span {
   position: relative;
   display: inline-block;
 }
+
 .services .header h2::after {
   content: '';
   display: block;
   width: 60px;
   height: 4px;
-  background-color: var(--link-color); /* blu */
+  background-color: var(--link-color);
+  /* blu */
   margin: 10px auto 0;
   border-radius: 2px;
 }
@@ -306,10 +325,13 @@ nav .right a span {
 .services .header p {
   font-size: 18px;
   color: #666;
-  width: 70%; /* Usa tutta la larghezza disponibile */
-  max-width: none; /* Rimuove il limite di larghezza */
+  width: 70%;
+  /* Usa tutta la larghezza disponibile */
+  max-width: none;
+  /* Rimuove il limite di larghezza */
   margin: 0 auto 40px;
-  text-align: center; /* Opzionale: giustifica il testo */
+  text-align: center;
+  /* Opzionale: giustifica il testo */
 }
 
 .service-grid {
@@ -325,7 +347,7 @@ nav .right a span {
   padding: 20px;
   border-radius: 10px;
   text-align: left;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .service-box .label {
@@ -334,9 +356,20 @@ nav .right a span {
   margin-bottom: 8px;
 }
 
-.label.ux { color: #2aa5f9; font-family: cursive; }
-.label.seo { color: #2aa5f9; font-family: cursive}
-.label.web { color: #2aa5f9; font-family: cursive}
+.label.ux {
+  color: #2aa5f9;
+  font-family: cursive;
+}
+
+.label.seo {
+  color: #2aa5f9;
+  font-family: cursive
+}
+
+.label.web {
+  color: #2aa5f9;
+  font-family: cursive
+}
 
 .service-box h3 {
   font-size: 20px;
@@ -392,6 +425,7 @@ nav .right a span {
 .view-all:hover {
   background-color: var(--link-color);
 }
+
 /* Responsive */
 @media (max-width: 900px) {
   .service-grid {
@@ -489,7 +523,7 @@ nav .right a span {
   padding: 20px;
   max-width: 400px;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -518,7 +552,7 @@ nav .right a span {
 
 
 .project-card h3 a,
-.and-symbol{
+.and-symbol {
   font-size: 20px;
   color: var(--link-color);
   font-family: var(--Outfit)
@@ -682,16 +716,19 @@ nav .right a span {
 
 
 @media (max-width: 850px) {
+
   /* SECTION 1: Hero */
   .hero-section .text h2 {
     font-size: 35px;
   }
-    .typing-container{
+
+  .typing-container {
     font-size: 20px;
   }
 }
 
 @media (max-width: 740px) {
+
   /* SECTION 1: Hero */
   .hero-section {
     flex-direction: column-reverse;
@@ -717,6 +754,7 @@ nav .right a span {
 }
 
 @media (max-width: 600px) {
+
   /* NAVBAR */
   html {
     font-size: 14px;
@@ -793,61 +831,71 @@ nav .right a span {
   }
 }
 
-  nav .right a:last-child {
-    color: var(--text-color);
-    background-color: transparent;
-    padding: 0;
-  }
+nav .right a:last-child {
+  color: var(--text-color);
+  background-color: transparent;
+  padding: 0;
+}
 
-  nav .right a span {
-    display: none;
-  }
+nav .right a span {
+  display: none;
+}
 
-  /* SECTION 1: Hero */
-  .hero-section {
-    padding: 0 20px;
-  }
+/* SECTION 1: Hero */
+.hero-section {
+  padding: 0 20px;
+}
 
-  .hero-section .text h2 {
-    font-size: 30px;
-  }
+.hero-section .text h2 {
+  font-size: 30px;
+}
 
-  /* SECTION 2: Skills */
-  .skills-section {
-    padding: 0 20px;
-  }
+/* SECTION 2: Skills */
+.skills-section {
+  padding: 0 20px;
+}
 
-  .skills-section .cells .cell span {
-    font-size: 16px;
-  }
+.skills-section .cells .cell span {
+  font-size: 16px;
+}
 
-  /* SECTION 3: Testimony */
-  .testimony-section {
-    padding: 0 20px;
-  }
+/* SECTION 3: Testimony */
+.testimony-section {
+  padding: 0 20px;
+}
 
-  /* SECTION 4: Contact */
-  .contact-section {
-    padding: 0 20px;
-  }
+/* SECTION 4: Contact */
+.contact-section {
+  padding: 0 20px;
+}
+
 @media (max-width: 768px) {
   nav {
+    margin-top: 30px;
+    display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 0 20px;
-    height: auto;
     gap: 10px;
   }
 
   nav .right {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    /* forza disposizione orizzontale */
     justify-content: center;
+    align-items: center;
+    gap: 30px;
+    /* spazio tra le icone */
+    flex-wrap: nowrap;
+    /* evita il wrap */
   }
 
   nav .right a {
-    font-size: 16px;
-    margin: 5px;
-    padding: 5px 10px;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero-section {
@@ -861,6 +909,10 @@ nav .right a span {
     width: 100%;
     max-width: 280px;
     margin: 0 auto;
+  }
+
+  .hero-section .text h1::after {
+    display: none;
   }
 
   .hero-section .text h1,
