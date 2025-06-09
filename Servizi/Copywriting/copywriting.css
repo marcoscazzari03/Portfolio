@@ -255,3 +255,82 @@ p {
   color: #333;
   line-height: 1.6;
 }
+@media (max-width: 768px) {
+
+  body {
+    padding: 0 15px;
+  }
+
+  nav {
+    padding: 0 20px;
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+    position: static !important;
+  }
+
+  nav .left,
+  nav .right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+
+  nav .right a {
+    margin: 5px 8px;
+    font-size: 16px;
+  }
+
+  nav .right a:last-child {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .highlight {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .divider {
+    width: 90%;
+  }
+
+  .services {
+    padding: 40px 10px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .intro, p {
+    font-size: 0.95rem;
+  }
+
+.fa-solid.fa-sheet-plastic {
+    font-size: 80px;
+  }
+
+  .btn-blu {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  #gotop {
+    right: 15px;
+    bottom: 15px;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
