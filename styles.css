@@ -1,144 +1,125 @@
 :root {
-  --text-color: #1a1c20;
-  --link-color: #4a76ee;
-  --background-color: #fff;
-  --background-color2: #f7f9f9;
-  --Epilogue: 'Epilogue', sans-serif;
-  --Outfit: 'Outfit', sans-serif;
+    --text-color: #1a1c20;
+    --link-color: #4a76ee;
+    --background-color: #fff;
+    --background-color2: #f7f9f9;
+    --Epilogue: 'Epilogue', sans-serif;
+    --Outfit: 'Outfit', sans-serif;
 }
 
+/* Stili Globali e Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  color: var(--text-color);
-  background-color: var(--background-color);
-  max-width: 1400px;
-  margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    max-width: 1400px;
+    margin: 0 auto; /* Centra il body nella pagina */
 }
 
-
+/* Stili per il Blinking Cursor e Scrollbar */
 .typing-container {
-  font-size: 2rem;
-  display: flex;
-  gap: 10px;
+    font-size: 2rem;
+    display: flex;
+    gap: 10px;
 }
 
 .typing-text::after {
-  content: '|';
-  animation: blink 0.7s infinite;
-  margin-left: 2px;
-  color: #4a76ee;
+    content: '|';
+    animation: blink 0.7s infinite;
+    margin-left: 2px;
+    color: var(--link-color); /* Usato --link-color per coerenza */
 }
 
 @keyframes blink {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+    background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--link-color);
+    background: var(--link-color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3161e3;
+    background: #3161e3;
 }
 
 a {
-  color: var(--link-color);
-  text-decoration: none;
+    color: var(--link-color);
+    text-decoration: none;
 }
 
-/* NAVBAR */
+/* --- NAVBAR --- */
 nav {
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 50px;
-  height: 80px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  background-color: transparent;
-  /* nessun background */
-}
-
-
-@media (max-width: 1023px) {
-  nav.scrolled {
-    position: fixed;
+    /* top, left, width, z-index sono utili se la navbar diventa fixed, altrimenti possono essere omessi */
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
-    background-color: transparent;
-    box-shadow: none;
-    flex-direction: row;
+    z-index: 999;
+    display: flex;
     justify-content: space-between;
-    padding: 0 50px;
-  }
-
-  nav.scrolled .left,
-  nav.scrolled .right {
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
-  }
+    padding: 0 50px;
+    height: 80px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent; /* Nessun background di default */
+}
 
-  nav.scrolled .right a {
-    margin: 0 10px;
-    font-size: inherit;
-  }
+/* Stili per la navbar quando è "scrolled" (presuppone una classe JS) */
+nav.scrolled {
+    position: fixed; /* Rende la navbar fissa quando scrollata */
+    background-color: var(--background-color); /* Aggiunge un background quando scrollata */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra */
 }
 
 nav .left a {
-  color: var(--text-color);
-  font-size: 22px;
-  font-weight: 600;
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
 }
 
 nav .right a {
-  color: var(--text-color);
-  margin: 0 10px;
+    color: var(--text-color);
+    margin: 0 10px;
 }
 
+/* Stile per l'ultimo link (es. il bottone "Contattami") */
 nav .right a:last-child {
-  color: var(--background-color);
-  background-color: var(--text-color);
-  padding: 5px 15px;
-  border-radius: 5px;
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+    /* Se questo è un bottone, assicurati che abbia senso che sia diverso quando scrollato */
 }
 
 nav .right a span {
-  margin-left: 5px;
+    margin-left: 5px;
 }
 
-/* SECTION 1: Hero */
+/* --- SECTION 1: Hero --- */
+
 .hero-section {
   display: flex;
   flex-direction: row-reverse;
@@ -242,12 +223,13 @@ nav .right a span {
 .hero-section .headshot {
   flex: 2;
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
 }
 
 .hero-section .headshot img {
   width: 550px;
   border-radius: 50%;
+  margin: 0 auto;
 }
 
 #gotop {
@@ -285,13 +267,11 @@ nav .right a span {
   background-color: #555;
 }
 
-/* SEZIONE: Servizi */
+/* --- SEZIONE: Servizi --- */
 .services .header {
   font-size: 50px;
   text-align: center;
-  /* Centra tutto */
   width: 100%;
-  /* Assicura che occupi tutta la larghezza */
   margin-bottom: 40px;
 }
 
@@ -302,8 +282,8 @@ nav .right a span {
 }
 
 .services .header h2 {
-  letter-spacing: -2px !important;
-  line-height: 1.1 !important;
+  letter-spacing: -2px;
+  line-height: 1.1;
   font-size: 50px;
   font-weight: 800;
   margin-bottom: 10px;
@@ -326,12 +306,9 @@ nav .right a span {
   font-size: 18px;
   color: #666;
   width: 70%;
-  /* Usa tutta la larghezza disponibile */
   max-width: none;
-  /* Rimuove il limite di larghezza */
   margin: 0 auto 40px;
   text-align: center;
-  /* Opzionale: giustifica il testo */
 }
 
 .service-grid {
@@ -882,13 +859,10 @@ nav .right a span {
   nav .right {
     display: flex;
     flex-direction: row;
-    /* forza disposizione orizzontale */
     justify-content: center;
     align-items: center;
     gap: 30px;
-    /* spazio tra le icone */
     flex-wrap: nowrap;
-    /* evita il wrap */
   }
 
   nav .right a {
